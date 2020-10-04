@@ -42,7 +42,7 @@ def f1_score(y_true, y_pred):
     recall = recall_m(y_true, y_pred)
     return 2*((precision*recall)/(precision+recall+K.epsilon()))
 # Model saved with Keras model.save()
-MODEL_PATH = 'vgg16_final_latest.h5'
+MODEL_PATH = 'vgg16_final.h5'
 dependencies = {'f1_score': f1_score,'precision_m':precision_m,'recall_m':recall_m}
 # Load your trained model
 model = load_model(MODEL_PATH,custom_objects=dependencies)
