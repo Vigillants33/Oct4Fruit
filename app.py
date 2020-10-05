@@ -62,8 +62,7 @@ def model_predict(path):
             with session.graph.as_default():
                 result=model.predict(img)
     for i in range(0,116):
-        if(result[0][i]==1.0):
-            
+        if(result[0][i]> 0.75):
             return(folders[i])
     
 
