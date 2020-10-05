@@ -87,6 +87,8 @@ def upload():
         # Make prediction
         preds = model_predict(file_path)
         print(preds)
+        if(preds == None):
+            return ("Invalid Image - Try Different Image")
 
         # Process your result for human
         # pred_class = preds.argmax(axis=-1)            # Simple argmax
