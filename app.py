@@ -63,6 +63,7 @@ def model_predict(path):
                 result=model.predict(img)
     for i in range(0,116):
         if(result[0][i]==1.0):
+            
             return(folders[i])
     
 
@@ -85,6 +86,7 @@ def upload():
 
         # Make prediction
         preds = model_predict(file_path)
+        print(preds)
 
         # Process your result for human
         # pred_class = preds.argmax(axis=-1)            # Simple argmax
